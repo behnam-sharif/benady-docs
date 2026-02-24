@@ -45,13 +45,7 @@ const config = {
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
-        docs: {
-          sidebarPath: './sidebars.js',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
+        docs: false,
         blog: {
           showReadingTime: true,
           feedOptions: {
@@ -74,6 +68,36 @@ const config = {
     ],
   ],
 
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'library',
+        path: 'library',
+        routeBasePath: 'library',
+        sidebarPath: require.resolve('./sidebars.js'),
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'xlgen',
+        path: 'xlgen_docs',
+        routeBasePath: 'xlgen',
+        sidebarPath: require.resolve('./sidebars.js'),
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'papers',
+        path: 'papers',
+        routeBasePath: 'papers',
+        sidebarPath: require.resolve('./sidebars.js'),
+      },
+    ],
+  ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -89,13 +113,21 @@ const config = {
           src: 'img/logo.svg',
         },
         items: [
+          { to: '/blog', label: 'Blog', position: 'left' },
           {
             type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            docsPluginId: 'xlgen',
+            sidebarId: 'xlgenSidebar',
+            label: 'XLGEN Repo',
             position: 'left',
-            label: 'Tutorial',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          {
+            type: 'docSidebar',
+            docsPluginId: 'papers',
+            sidebarId: 'papersSidebar',
+            label: 'Papers',
+            position: 'left',
+          },
           {
             href: 'https://github.com/facebook/docusaurus',
             label: 'GitHub',
@@ -109,10 +141,10 @@ const config = {
           {
             title: 'Docs',
             items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
+              { label: 'Blog', to: '/blog' },
+              { label: 'Library', to: '/library' },
+              { label: 'XLGEN Repo', to: '/xlgen' },
+              { label: 'Papers', to: '/papers' },
             ],
           },
           {
