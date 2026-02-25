@@ -1,5 +1,6 @@
 ---
-title: Notes
+title: Papers
+sidebar_label: Overview
 ---
 
-Notes, links, and useful finds.
+Papers, whitepapers, and research.
