@@ -18,9 +18,9 @@ function HomepageHeader() {
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
           <Link
-            className="button button--secondary button--lg"
+            className={clsx('button button--secondary button--lg', styles.heroButton)}
             to="/xlgen">
-            Docusaurus Tutorial - 5min ⏱️
+            XLGEN Docs
           </Link>
         </div>
       </div>
@@ -32,8 +32,8 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title={siteConfig.title}
+      description="Benady documentation portal - Technical documentation, AI programming for HEOR, BIM and CEM Excel models.">
       <HomepageHeader />
       <main>
         <HomepageFeatures />

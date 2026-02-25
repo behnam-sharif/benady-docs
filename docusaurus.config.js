@@ -10,8 +10,8 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'Benady Doc Portal',
+  tagline: 'AI programming for Excel Models in Health Economics',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -106,13 +106,16 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       colorMode: {
-        respectPrefersColorScheme: true,
+        defaultMode: 'dark',
+        respectPrefersColorScheme: false,
       },
       navbar: {
-        title: 'My Site',
+        title: 'Benady Doc Portal',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: 'Benady Doc Portal Logo',
+          src: 'img/image_edited.avif',
+          href: 'https://www.benadyconsults.com/',
+          target: '_blank',
         },
         items: [
           { to: '/blog', label: 'Blog', position: 'left' },
@@ -131,7 +134,7 @@ const config = {
             position: 'left',
           },
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/behnam-sharif',
             label: 'GitHub',
             position: 'right',
           },
@@ -144,7 +147,6 @@ const config = {
             title: 'Docs',
             items: [
               { label: 'Blog', to: '/blog' },
-              { label: 'Library', to: '/library/' },
               { label: 'XLGEN Repo', to: '/xlgen/' },
               { label: 'Papers', to: '/papers/' },
             ],
@@ -175,7 +177,7 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/behnam-sharif',
               },
             ],
           },

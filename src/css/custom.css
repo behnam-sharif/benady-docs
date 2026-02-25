@@ -5,26 +5,80 @@
  */
 
 /* You can override the default Infima variables here. */
+/* Orange, black and white theme */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: #ea580c;
+  --ifm-color-primary-dark: #c2410c;
+  --ifm-color-primary-darker: #b33d0b;
+  --ifm-color-primary-darkest: #94320a;
+  --ifm-color-primary-light: #f97316;
+  --ifm-color-primary-lighter: #fb923c;
+  --ifm-color-primary-lightest: #fdba74;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* Dark mode: dark orange */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --ifm-color-primary: #c2410c;
+  --ifm-color-primary-dark: #ea580c;
+  --ifm-color-primary-darker: #f97316;
+  --ifm-color-primary-darkest: #fb923c;
+  --ifm-color-primary-light: #9a3412;
+  --ifm-color-primary-lighter: #7c2d12;
+  --ifm-color-primary-lightest: #431407;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* Light mode: hero background black, text white for contrast */
+[data-theme='light'] .hero.hero--primary {
+  background-color: #000 !important;
+}
+[data-theme='light'] .hero.hero--primary .hero__title,
+[data-theme='light'] .hero.hero--primary .hero__subtitle {
+  color: #fff !important;
+}
+
+/* Navbar "Benady Doc Portal" title: bold black in light mode, bold white in dark mode */
+[data-theme='light'] .navbar__title {
+  color: #000 !important;
+  font-weight: bold;
+}
+[data-theme='dark'] .navbar__title {
+  color: #fff !important;
+  font-weight: bold;
+}
+
+/* Navbar logo: 20% bigger */
+.navbar__logo {
+  transform: scale(1.2);
+  transform-origin: left center;
+}
+
+/* Blog page: light mode titles bold black; dark mode list titles #E0A800, post page titles white */
+[data-theme='light'] .blog-post-page h1,
+[data-theme='light'] .blog-post-page .markdown h1,
+[data-theme='light'] .blog-list-page h2 a,
+[data-theme='light'] [class*="BlogPostPage"] h1,
+[data-theme='light'] [class*="BlogListPage"] h2 a {
+  color: #000 !important;
+  font-weight: bold;
+}
+/* Dark mode: blog list page (first click Blog) – post title links golden orange #E0A800 */
+[data-theme='dark'] .blog-list-page h2 a,
+[data-theme='dark'] [class*="BlogListPage"] h2 a,
+[data-theme='dark'] h2 a[href^="/blog/"] {
+  color: #E0A800 !important;
+}
+/* Dark mode: blog post page (after clicking a post in left nav) – titles white */
+[data-theme='dark'] .blog-post-page h1,
+[data-theme='dark'] .blog-post-page .markdown h1,
+[data-theme='dark'] [class*="BlogPostPage"] h1 {
+  color: #fff !important;
+}
+/* Blog list title link hover */
+.blog-list-page h2 a:hover,
+[class*="BlogListPage"] h2 a:hover,
+[data-theme='dark'] h2 a[href^="/blog/"]:hover {
+  color: #e8b814 !important;
 }
