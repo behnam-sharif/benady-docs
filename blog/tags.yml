@@ -1,19 +1,14 @@
-facebook:
-  label: Facebook
-  permalink: /facebook
-  description: Facebook tag description
+welcome:
+  label: Welcome
+  permalink: /welcome
+  description: Welcome posts for the Benady Doc Portal
 
-hello:
-  label: Hello
-  permalink: /hello
-  description: Hello tag description
+heor:
+  label: HEOR
+  permalink: /heor
+  description: Health economics and outcomes research
 
-docusaurus:
-  label: Docusaurus
-  permalink: /docusaurus
-  description: Docusaurus tag description
-
-hola:
-  label: Hola
-  permalink: /hola
-  description: Hola tag description
+ai:
+  label: AI
+  permalink: /ai
+  description: Application of AI in health economic modeling

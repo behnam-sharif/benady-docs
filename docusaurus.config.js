@@ -19,6 +19,12 @@ const config = {
     v4: true, // Improve compatibility with the upcoming Docusaurus v4
   },
 
+  markdown: {
+    mermaid: true,
+  },
+
+  themes: ['@docusaurus/theme-mermaid'],
+
   // Set the production url of your site here
   url: 'https://your-docusaurus-site.example.com',
   // Set the /<baseUrl>/ pathname under which your site is served
@@ -84,9 +90,9 @@ const config = {
       '@docusaurus/plugin-content-docs',
       {
         id: 'xlgen',
-        path: 'xlgen_docs',
+        path: 'docportal',
         routeBasePath: 'xlgen',
-        sidebarPath: require.resolve('./sidebars.js'),
+        sidebarPath: require.resolve('./sidebars-xlgen.js'),
       },
     ],
     [
@@ -95,7 +101,7 @@ const config = {
         id: 'papers',
         path: 'papers',
         routeBasePath: 'papers',
-        sidebarPath: require.resolve('./sidebars.js'),
+        sidebarPath: require.resolve('./sidebars-papers.js'),
       },
     ],
   ],

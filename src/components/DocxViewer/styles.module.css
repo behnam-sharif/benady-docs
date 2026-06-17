@@ -1,0 +1,10 @@
+.docxViewer :global(.docx-wrapper) {
+  background: var(--ifm-background-color);
+  padding: 1rem 0;
+}
+
+.docxViewer :global(.docx-wrapper > section.docx) {
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.12);
+  margin: 0 auto;
+  max-width: 100%;
+}
